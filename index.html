@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Catálogo 88ML Delivery</title>
+<style>
+:root{--bg:#fff;--card:#f5f5f7;--tx:#1a1a1a;--mu:#666;--ac:#e8a200;--ok:#1a8f4c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121212;--card:#1e1e1f;--tx:#f2f2f2;--mu:#a0a0a0}}
+:root[data-theme="dark"]{--bg:#121212;--card:#1e1e1f;--tx:#f2f2f2;--mu:#a0a0a0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{padding:20px 16px 8px;max-width:760px;margin:auto}
+h1{margin:0;font-size:24px}h1 span{color:var(--ac)}
+.sub{color:var(--mu);font-size:13px;margin:4px 0 12px}
+#q{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #8884;background:var(--card);color:var(--tx);font-size:16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:5;display:flex;gap:8px;overflow-x:auto;padding:10px 16px;max-width:760px;margin:auto}
+nav button{flex:none;border:0;padding:8px 14px;border-radius:20px;background:var(--card);color:var(--tx);font-size:14px;cursor:pointer}
+nav button.on{background:var(--ac);color:#000;font-weight:600}
+main{max-width:760px;margin:auto;padding:0 16px 40px}
+h2{font-size:20px;margin:22px 0 4px}h3{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--mu);margin:14px 0 6px}
+.i{display:flex;justify-content:space-between;gap:12px;align-items:center;background:var(--card);padding:10px 12px;border-radius:10px;margin-bottom:6px;font-size:15px}
+.p{text-align:right;flex:none;font-weight:700}.p small{display:block;font-weight:500;color:var(--ok);font-size:12px}
+.note{color:var(--mu);font-size:12px;text-align:center;margin-top:24px}
+</style></head><body>
+<header><h1>88ML <span>Delivery</span></h1>
+<div class="sub">Atualizado em 07/10/2026 · Atacado: preço promocional a partir de 4 unidades · Venda proibida para menores de 18 anos</div>
+<input id="q" type="search" placeholder="Buscar produto..."></header>
+<nav id="nav"></nav><main id="m"></main>
+<script>
+const R=`#🍺 Cervejas
+##Long Neck
+Becks 330ml|7.49|
+Budweiser 330ml|6.59|8
+Corona 330ml|8.29|10
+Eisenbahn Pilsen 355ml|5.99|8
+Eisenbahn IPA 355ml|8.19|9
+Eisenbahn Weizenbier 355ml|8.19|9
+Heineken 330ml|7.69|10
+Heineken Ultimate 330ml|8.19|10
+Império Lager 330ml|5.99|7
+Império Pilsen 355ml|5.99|7
+Império Ultra 275ml|6.39|8
+Michelob 330ml|6.49|9
+Spaten 355ml|6.69|8
+Stella Artois 330ml|7.49|9
+Stella Artois Pure Gold 330ml|8.19|10
+Petra Ultra 275ml|5.99|7
+Flying Fish 330ml|6.69|8.5
+Chopp de Vinho Stempel 500ml|10.99|12
+##Sem Álcool
+Budweiser 330ml|6.59|8
+Corona 330ml|8.29|10
+Heineken 330ml|7.49|10
+##Latão
+Amstel 473ml|5.19|9
+Brahma 473ml|4.89|8
+Heineken 473ml|6.59|10
+Itaipava 473ml|3.85|6
+Original 473ml|5.79|9
+Skol 473ml|4.59|8
+##Fardo (12 unidades)
+Amstel 473ml||62.28
+Brahma 473ml||58.68
+Heineken 473ml||79.08
+Itaipava 473ml||46.20
+Original 473ml||69.48
+Skol 473ml||55.08
+##Garrafa
+Brahma 600ml|7.99|11
+Corona 600ml|11.50|14
+Heineken 600ml|11.49|14
+Original Antarctica 600ml|9.49|12
+Spaten 600ml|9.25|14
+Stella Artois 600ml|10.69|14
+Stella Artois Pure Gold 600ml|11.69|14
+##Litrão
+Brahma 1L|8.99|15
+#🥤 Sem Álcool
+##Bebidas
+Água São Lourenço Com Gás 510ml|3.49|4.5
+Água São Lourenço Sem Gás 510ml|3.29|4
+Água Tônica Antarctica 350ml|3.99|6
+Gatorade 500ml|5.99|6.5
+Powerade 500ml|5.99|6.5
+Suco Del Valle 1L|10.49|12
+Suco Tial Água de Coco 330ml|5.49|6
+Piracanjuba Whey 15g Proteína|7.99|9
+#⚡ Energéticos
+##Energéticos
+Fusion/Magneto 2L|11.49|13
+Red Bull 250ml|10.99|13
+Red Bull 250ml (Sabores)|10.99|13
+Red Bull Sem Açúcar 250ml|10.99|13
+Monster 473ml|10.99|13
+TNT 463ml|6.99|8
+TNT 269ml|7|
+#🥤 Refrigerantes
+##Refrigerantes
+Coca-Cola/Coca Zero 350ml|4.69|6
+Coca-Cola 2L|11.99|13
+Fanta Laranja 350ml|3.99|6
+Fanta Laranja 2L|9.49|12
+Guaraná Antarctica 350ml|3.99|6
+Guaraná Antarctica Zero 350ml|3.99|6
+Guaraná Antarctica 2L|9.49|12
+H2OH! 350ml|4.99|6
+Pepsi 350ml|3.99|6
+Sprite 350ml|3.99|6
+Sprite 2L|9.49|12
+#🍹 Drinks Prontos
+##Drinks
+Skol Beats Long Neck 269ml|8.99|10
+Ice Smirnoff 275ml|9.49|10
+Skol Beats Lata 269ml|6.99|8
+Xeque-Mate 355ml|10.49|12
+Cabaré Ice 275ml|7.99|9
+Corote Combo 1L||23.90
+Mansão Maromba 1L||23.90
+##Copão
+White Horse + Red Bull + Água de Coco||40
+Absolut + Red Bull + Água de Coco||40
+Gordon's + Tônica + Água de Coco||40
+#🥃 Whisky
+##Whisky
+Old Eight 1L||49.90
+Natu Nobilis 1L||59.90
+Teachers 1L||59.90
+Passport 1L||79.90
+Ballantine's Finest 750ml||89.90
+Ballantine's Sunshine 700ml||89.90
+Johnnie Walker Red Label 750ml||94.90
+Johnnie Walker Blonde 750ml||94.90
+White Horse 1L||99.90
+Jameson 750ml||99.90
+Jim Beam Original Bourbon 1L||104.90
+Ballantine's Finest 1L||109.90
+Jim Beam Apple 1L||109.90
+Dewar's 12 Anos 750ml||114.90
+Johnnie Walker Red Label 1L||119.90
+Johnnie Walker Black Label 750ml||144.90
+Chivas Regal 12 Anos 1L||149.90
+Jack Daniel's Tradicional 1L||149.90
+Jack Daniel's Honey 1L||149.90
+Jack Daniel's Fire 1L||149.90
+Buchanan's 12 Anos 750ml||154.90
+Grand Old Parr 1L||154.90
+Maker's Mark 750ml||159.90
+Jack Daniel's Apple 1L||169.90
+Buffalo Trace Bourbon 750ml||179.90
+Johnnie Walker Double Black 1L||219.90
+#🍸 Vodka
+##Vodka
+Askov Tradicional 1L||23.90
+Askov (Sabores) 1L||23.90
+Orloff 1L||36.90
+Skyy 750ml||39.90
+Smirnoff Red 1L||49.90
+Skyy 980ml||54.90
+Absolut 750ml||92.90
+Grey Goose 750ml||179.90
+#🍸 Gin
+##Gin
+Invictus 900ml||26.90
+Theros 1L||44.90
+Nick's 750ml||49.90
+Uyra 700ml||54.90
+Orloff 1L||59.90
+Seagers 980ml/1L||59.90
+Becosa 1L||59.90
+Gordon's 750ml||84.90
+Beefeater 750ml||109.90
+Bombay Sapphire 750ml||119.90
+Tanqueray 750ml||129.90
+Bulldog 750ml||134.90
+#🍾 Destilados e Mistas
+##Destilados e Bebidas Mistas
+Jurubeba Marcon Dunorte 900ml||19.90
+Alba Conhaque com Mel 1L||21.90
+Canelinha da Rocha||21.90
+Paratudo||21.90
+Paratini||21.90
+Catuaba Selvagem 1L||21.90
+Presidente 900ml||21.90
+Fuego Loco||21.90
+Jurubeba Leão do Norte 600ml||24.90
+Pinga Azul Blue Cream||24.90
+Domus 1L||24.90
+Saque Kyodai 750ml||24.90
+Teqpar 1L||29.90
+Schuss Steinhaeger 980ml||34.90
+Cynar 900ml||34.90
+São João da Barra||34.90
+Dreher 900ml||34.90
+Montilla Carta Cristal 1L||38.90
+Montilla Carta Branca 1L||38.90
+Montilla Carta Ouro 1L||38.90
+Cabaré Fire Canela||44.90
+Red Melo||44.90
+Domecq 1L||44.90
+St Remy 750ml||49.90
+Vermelhão 700ml||49.90
+Busca Brisa 1L||49.90
+Jurupinga 1L||49.90
+Campari Bitter 748ml||58.90
+Stock Curaçau Blue 720ml||59.90
+Aperol 750ml||64.90
+Stock Creme de Menta||64.90
+Seagers Negroni 980ml||64.90
+Bacardi Big Apple 980ml||69.90
+Bacardi Limón 980ml||69.90
+Bacardi Mojito 980ml||69.90
+Bacardi Carta Oro 980ml||69.90
+Campari Bitter 900ml||74.90
+Stock Chocolate||74.90
+Fireball 750ml||99.90
+Frangelico 700ml||117.90
+Baileys Original 750ml||139.90
+Ballena Morango 750ml||146.90
+Cointreau 700ml||149.90
+#🥃 Cachaça
+##Cachaça
+Artesanal Branca 750ml||19.90
+Pinga 51 965ml||21.90
+Velho Barreiro 910ml||21.90
+Ypióca 965ml||29.90
+Cafundó (Sabores) 750ml||29.90
+Cafundó Prata 750ml||29.90
+Cafundó Ouro 750ml||29.90
+Cabaré Prata 700ml||34.90
+Sagatiba 700ml||34.90
+Sagatiba Jabuti & Jambu 700ml||34.90
+Cabaré Ouro 700ml||37.90
+Cabaré Amburana 700ml||39.90
+D'Gusta Bananinha Original 750ml||49.90
+D'Gusta Canelinha Fire 750ml||49.90
+D'Gusta Açainha 750ml||49.90
+D'Gusta Bananinha Premium 750ml||89.90
+D'Gusta Canelinha Premium 750ml||89.90
+D'Gusta Coquinho Premium 750ml||89.90
+D'Gusta DiCafé Premium 750ml||89.90
+Cafundó Gold||120
+#🍷 Vinhos
+##Vinhos
+Canção 750ml||24.90
+Pérgola Seco/Suave||32.90
+Concha y Toro Reservado 750ml||37.90
+Almaden 750ml||39.90
+Santa Carolina 750ml||39.90
+Hormiga Negra de Los Andes 750ml||39.90
+Santa Helena 750ml||41.90
+3 Medalhas||44.90
+I Heart Shiraz 750ml||44.90
+San Marco 750ml||44.90
+Tres Torrentes 750ml||44.90
+Terras Lusas 750ml||49.90
+Casillero del Diablo 750ml||54.90
+Novecento||54.90
+Trapiche Astica Cabernet Sauvignon 750ml||54.90
+Las Perdices Malbec 375ml||54.90
+Duque Sevilla 750ml||54.90
+Dona Dominga 750ml||59.90
+Alandra Tinto 750ml||69.90
+Dona Dominga Reserva Black 750ml||69.90
+Ravanal Reserva 750ml||69.90
+Lys de France 750ml||72.90
+Trivento Reserva Malbec 750ml||74.90
+Cabeza de Piedra 750ml||89.90
+Dory 750ml||89.90
+Ravanal Gran Reserva 750ml||89.90
+Valle Hermoso 750ml||59.90
+Dante Robino||99.90
+TerraNoble Reserva 750ml||119.90
+#🍫 Bomboniere
+##Chocolate
+Paçoca/Paçoquita 18g||0.99
+Baton ao Leite 16g||2.49
+Sonho de Valsa 20g||2.49
+Diamante Negro 20g||3.99
+Laka Lacta 20g||3.99
+Trento||3.99
+Barra de Cereais Trio 20g||3.99
+Talento (Sabores) 25g||4.99
+Snickers 45g||5.99
+Kit Kat 41,5g||6.49
+Talento Diet 25g||6.49
+Suflair 50g||7.99
+Kinder Bueno 43g||8.99
+Serenata 90g||9.89
+Barra de Proteína Bold 40g||9.90
+Bold Tube 40g||9.90
+Prestígio 90g||10.99
+Crunch 80g||12.99
+##Salgadinho
+Torcida||2.99
+Fandangos 34g||5
+Cheetos 34g||5.49
+Cebolitos 36g||5.99
+Baconzitos 34g||5.99
+Croques 45g||5.99
+Ruffles 45g||6
+Doritos Queijo Nacho 37g||6.49
+Doritos Pimenta Mexicana 60g||6.49
+Doritos Flamin' Hot 60g||6.49
+Doritos Sweet Chilli 37g||6.49
+Doritos Spicy Nacho 32g||6.49
+Lay's 35g||6.49
+Batata Sensações 40g||7.49
+Pringles Cebola/Churrasco 109g||14.99
+##Amendoim
+Crocante Ricco 50g (Sabores)||2
+Pettiz 50g||4
+Japonês Elma Chips 45g||5
+Jazam||5
+##Bala, Chiclete e Doce
+Paçoca/Paçoquita 18g||0.99
+Pastilha Garoto Hortelã||2.99
+Halls 28g||3
+Trident||4
+Mentos 37,5g||5
+Fruit-tella 40g||5
+#🥩 Carnes
+##Carnes
+Pão de Alho Carolina Black||15.90
+Linguiça Nalin||27.90
+Copa-Lombo Suíno Adeel||29.90
+Linguiça Carolina Black Requeijão 400g||39.90
+Ancho Suíno Adeel||39.90
+Linguiça Costela Bovina||39.90
+Espetinho Coração de Frango||49.90
+Espetinho Medalhão de Frango||49.90
+Cupim BBQ Secrets||59.90
+Ancho Chef||67.90
+Fralda PUL Selection||74.90
+Chorizo Estância 92||79.90
+Steak Chorizo Estância 92||79.90
+Maminha Estância 92||79.90
+Chorizo BBQ Secrets||84.90
+Picanha PUL Argentina||89.90
+Ancho Bassi||89.90
+Ancho Estância 92||92.90
+Picanha PUL Uruguaia||104.90
+Picanha BBQ Secrets||139.90
+Picanha Estância 92||144.90
+Picanha Cabana Las Lilas||149.90
+#🛒 Conveniência
+##Conveniência
+Seda Zomo 1 unidade||1
+Copo 700ml||1
+Pipoca Yoki Manteiga Cinema 100g||3.99
+Pipoca Yoki Rok Chef 100g||3.99
+Gelo de Sabor Coco Beats 200ml|3.99|4.50
+Isqueiro Pequeno||5
+Isqueiro Grande||7
+Pacote Seda Zomo 33 unidades||10
+Queijinho/Queijo 100g||12
+Queijo Nozinho 150g||12
+Mostarda Heinz 255g||12.90
+Sal de Parrilha 100g||12.90
+Heinz Ketchup Picante 397g||14.90
+Heinz Maionese Tradicional 390g||14.90
+Saco de Carvão||15
+Salame Italiano Seara 100g||15.90
+Pizza Seara Frango com Catupiry 460g||24.90
+Pizza Seara Lombo com Catupiry 460g||24.90
+Pizza Seara Quatro Queijos 460g||24.90
+Gelo 5kg||19.90
+Sal de Parrilha MA 500g||29.90
+Patagonia Amber Lager 355ml||10
+#🚬 Cigarros
+##Cigarros
+Paieiro (unidade)||1
+Rothmans (unidade)||1.50
+Lucky Strike Double Ice (unidade)||2
+Black (unidade)||2
+Dunhill (unidade)||2
+Paieiro (maço)||6
+Paieiro (maço, versão 2)||7
+Rothmans (maço c/20)||15
+Lucky Strike Blue/Red (maço c/20)||16
+Dunhill Blue/Red (maço c/20)||16.50
+Lucky Strike Double Ice (maço c/20)||18
+Dunhill/Carlton (maço c/20)||19
+Black (maço c/20)||25`;
+const C=[];R.split("\n").forEach(l=>{if(l[0]=="#"&&l[1]!="#")C.push({n:l.slice(1),s:[]});else if(l.slice(0,2)=="##")C.at(-1).s.push({n:l.slice(2),i:[]});else{const[a,b,c]=l.split("|");C.at(-1).s.at(-1).i.push([a,+b||0,+c||0])}});
+const f=v=>"R$ "+v.toFixed(2).replace(".",",");
+const m=document.getElementById("m"),nav=document.getElementById("nav"),q=document.getElementById("q");let cur=0;
+function draw(){const t=q.value.trim().toLowerCase();let h="";
+(t?C:[C[cur]]).forEach(c=>{let s="";c.s.forEach(x=>{const it=x.i.filter(i=>!t||i[0].toLowerCase().includes(t));if(!it.length)return;
+s+=(c.s.length>1||t?`<h3>${x.n}</h3>`:"")+it.map(([n,a,v])=>`<div class="i"><span>${n}</span><span class="p">${f(v||a)}${v&&a?`<small>${f(a)} a partir de 4 un.</small>`:""}</span></div>`).join("")});
+if(s)h+=`<h2>${c.n}</h2>`+s});
+m.innerHTML=(h||"<p>Nenhum produto encontrado.</p>")+'<p class="note">Preços sujeitos a alteração. Consulte disponibilidade pelo WhatsApp.</p>';
+nav.style.display=t?"none":"flex"}
+nav.innerHTML=C.map((c,i)=>`<button data-i="${i}">${c.n}</button>`).join("");
+function mark(){[...nav.children].forEach((b,i)=>b.className=i==cur?"on":"")}
+nav.onclick=e=>{if(e.target.dataset.i){cur=+e.target.dataset.i;mark();draw();scrollTo(0,0)}};
+q.oninput=draw;mark();draw();
+</script></body></html>
