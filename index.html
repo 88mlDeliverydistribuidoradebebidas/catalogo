@@ -401,7 +401,7 @@ Lucky Strike Double Ice (maço c/20)||18
 Dunhill/Carlton (maço c/20)||19
 Black (maço c/20)||25`;
 const C=[];R.split("\n").forEach(l=>{if(l[0]=="#"&&l[1]!="#")C.push({n:l.slice(1),s:[]});else if(l.slice(0,2)=="##")C.at(-1).s.push({n:l.slice(2),i:[]});else{const[a,b,c]=l.split("|");C.at(-1).s.at(-1).i.push([a,+b||0,+c||0])}});
-const X=["jpg","png","jpeg","webp"],u=n=>"produtos/"+encodeURIComponent(n.replace(/[\/ ]/g,"-"));
+const X=["jpg","png","jpeg","webp"],u=n=>"Produtos/"+encodeURIComponent(n.replace(/[\/ ]/g,"-"));
 function nx(e){const t=+e.dataset.t+1;if(t<X.length){e.dataset.t=t;e.src=e.dataset.b+"."+X[t]}else e.remove()}
 const S=new Map,K=(c,x,n)=>c.n+"|"+x.n+"|"+n;
 const f=v=>"R$ "+v.toFixed(2).replace(".",",");
